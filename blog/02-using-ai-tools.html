@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      background: #0f0f0f;
+      background: #0e0e0e;
       color: #f0f0f0;
       margin: 2rem;
       line-height: 1.7;
@@ -18,11 +18,42 @@
     a {
       color: #00bfff;
     }
+    .ai-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 1.5rem;
+    }
+    .ai-card {
+      background: #1a1a1a;
+      border-radius: 15px;
+      padding: 1rem;
+      box-shadow: 0 0 10px rgba(255, 107, 0, 0.3);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .ai-card:hover {
+      transform: scale(1.03);
+    }
+    .ai-card img {
+      height: 70px;
+      margin-bottom: 10px;
+    }
+    .ai-card h3 {
+      color: #ffcc00;
+      margin-bottom: 0.5rem;
+    }
+    .ai-card p {
+      font-size: 0.95rem;
+    }
     code {
       background: #1e1e1e;
-      padding: 2px 5px;
+      padding: 2px 6px;
       border-radius: 4px;
       color: #ffcc00;
+    }
+    .section {
+      margin-bottom: 2.5rem;
     }
   </style>
 </head>
@@ -30,36 +61,106 @@
   <h1>Using AI Tools to Build PantaneOS</h1>
   <p><em>Posted on October 28, 2025</em></p>
 
-  <p>
-    This post dives into how multiple AI platforms are being used together to bring <strong>PantaneOS</strong> to life — 
-    not just as a concept, but as a working example of how humans and AIs can collaborate to create an intelligent digital environment.
-  </p>
+  <div class="section">
+    <p>
+      In this phase, we explore the various <strong>AI tools</strong> integrated into the creation of <strong>PantaneOS</strong> — 
+      understanding each system’s role, supported languages, API connections, and estimated contribution timelines.
+    </p>
+  </div>
 
-  <h2>AI Tools Involved</h2>
-  <ul>
-    <li><strong>ChatGPT (GPT-5)</strong> — Acts as the main architect and planner. It structures the OS ideas, generates scripts, documentation, and teaches concepts in real time.</li>
-    <li><strong>Claude</strong> — Used for refining long text, helping with system logic, and building cleaner user interface explanations.</li>
-    <li><strong>Gemini</strong> — Assists in visual generation, planning UI flows, and connecting Google AI tools to the project.</li>
-    <li><strong>GitHub Copilot</strong> — Supports code completion and debugging while working inside editors like VS Code or Codespaces.</li>
-    <li><strong>Replit</strong> — Provides an online environment to run and test code quickly without heavy setup.</li>
-    <li><strong>Canva</strong> — Used to design posters, promotional visuals, and mockups for PantaneOS.</li>
-    <li><strong>Lovable.dev</strong> — Acts as a visual builder for interactive pages and portfolio integration.</li>
-  </ul>
+  <h2>AI Tool Overview</h2>
+  <div class="ai-grid">
 
-  <h2>Workflow Overview</h2>
-  <p>
-    The workflow begins in <code>ChatGPT</code>, where the initial structure and design prompts are created.  
-    These are then tested in <code>Replit</code> or <code>Codespaces</code>, refined using <code>Copilot</code>, and 
-    styled visually with <code>Canva</code> or <code>Lovable.dev</code>.  
-    Every progress step is saved here on GitHub to maintain a transparent open-source journey.
-  </p>
+    <div class="ai-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="ChatGPT logo">
+      <h3>ChatGPT (GPT-5)</h3>
+      <p>Main architect for planning, documentation, and intelligent coding guidance.</p>
+      <p><strong>Languages:</strong> HTML, CSS, JS, Python, Markdown</p>
+      <p><strong>Role:</strong> Generate code, explain logic, and manage project flow.</p>
+      <p><strong>APIs:</strong> OpenAI API</p>
+      <p><strong>Time:</strong> Continuous — serves throughout development</p>
+    </div>
 
-  <h2>Goal for This Phase</h2>
-  <p>
-    The goal was to build a creative environment that allows different AI systems to contribute unique strengths 
-    — text, visuals, and code — to one cohesive operating system concept.  
-    This documentation ensures anyone can replicate or learn from this process later.
-  </p>
+    <div class="ai-card">
+      <img src="https://seeklogo.com/images/A/anthropic-ai-logo-94A1F7B5E6-seeklogo.com.png" alt="Claude logo">
+      <h3>Claude</h3>
+      <p>Focuses on reasoning, documentation clarity, and improving readability of long content.</p>
+      <p><strong>Languages:</strong> English, Markdown, JSON</p>
+      <p><strong>Role:</strong> Refine system documents, generate clean summaries.</p>
+      <p><strong>APIs:</strong> Anthropic API</p>
+      <p><strong>Time:</strong> 1 week (content polishing phase)</p>
+    </div>
+
+    <div class="ai-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Google_Gemini_logo.svg" alt="Gemini logo">
+      <h3>Gemini</h3>
+      <p>Used for design ideation, UI planning, and integrating Google Cloud tools.</p>
+      <p><strong>Languages:</strong> JavaScript, TypeScript, JSON</p>
+      <p><strong>Role:</strong> Provide visual layouts and logic flows.</p>
+      <p><strong>APIs:</strong> Google Generative AI API</p>
+      <p><strong>Time:</strong> 3 days per design iteration</p>
+    </div>
+
+    <div class="ai-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/GitHub_Copilot_logo.svg" alt="GitHub Copilot logo">
+      <h3>GitHub Copilot</h3>
+      <p>AI pair programmer that assists with real-time code suggestions and debugging.</p>
+      <p><strong>Languages:</strong> JavaScript, HTML, CSS, Python</p>
+      <p><strong>Role:</strong> Complete snippets and reduce repetitive coding.</p>
+      <p><strong>APIs:</strong> GitHub Copilot API (in VS Code)</p>
+      <p><strong>Time:</strong> Constant during build cycles</p>
+    </div>
+
+    <div class="ai-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Repl.it_logo.svg" alt="Replit logo">
+      <h3>Replit</h3>
+      <p>Cloud IDE for fast prototyping and hosting smaller test components of PantaneOS.</p>
+      <p><strong>Languages:</strong> JavaScript, Python, Node.js</p>
+      <p><strong>Role:</strong> Test code and simulate modules before deployment.</p>
+      <p><strong>Time:</strong> 2 weeks (test environment setup and iteration)</p>
+    </div>
+
+    <div class="ai-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Canva_icon_2021.svg" alt="Canva logo">
+      <h3>Canva</h3>
+      <p>Used for poster and marketing design — creating visual assets for PantaneOS updates.</p>
+      <p><strong>Languages:</strong> Visual, drag-and-drop</p>
+      <p><strong>Role:</strong> Produce promotional visuals, UI mockups.</p>
+      <p><strong>Time:</strong> 3–4 hours per visual asset</p>
+    </div>
+
+    <div class="ai-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/1087/1087927.png" alt="Lovable.dev logo">
+      <h3>Lovable.dev</h3>
+      <p>Low-code visual builder used to create portfolio-style web apps and prototypes.</p>
+      <p><strong>Languages:</strong> HTML, React, Tailwind CSS</p>
+      <p><strong>Role:</strong> Generate no-code interfaces quickly for testing UI ideas.</p>
+      <p><strong>APIs:</strong> Internal API integrations</p>
+      <p><strong>Time:</strong> 1–2 days per section build</p>
+    </div>
+
+  </div>
+
+  <div class="section">
+    <h2>Integration Summary</h2>
+    <p>
+      The build workflow connects these tools through shared assets and repositories.  
+      <code>ChatGPT</code> handles the primary logic and generation, while <code>Copilot</code> 
+      supports live editing. <code>Gemini</code> and <code>Canva</code> handle visuals, 
+      and <code>Lovable.dev</code> enables quick front-end testing.  
+      Finally, everything is deployed and tracked on <strong>GitHub Pages</strong>.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Estimated Development Timeline</h2>
+    <ul>
+      <li><strong>Planning & Design:</strong> 2 weeks</li>
+      <li><strong>Prototype Build:</strong> 3–4 weeks</li>
+      <li><strong>Testing & AI Integration:</strong> 2 weeks</li>
+      <li><strong>Public Documentation:</strong> Continuous updates</li>
+    </ul>
+  </div>
 
   <p><a href="index.html">← Back to Blog</a></p>
 </body>
